@@ -26,7 +26,10 @@ class Transfer
   end
 
   def reverse_transfer
-    #   can reverse a transfer between two accounts
-    #   it can only reverse executed transfers
+    if self.status = "complete"
+      self.receiver.deposit(-@amount)
+      self.sender.deposit(@amount)
+      self.status = "reversed"
+    end
   end
 end

@@ -12,6 +12,7 @@ class Transfer
 
   def valid?
     self.sender.valid? && self.receiver.valid?
+    binding.pry
   end
 
   def execute_transaction
@@ -20,7 +21,6 @@ class Transfer
       self.receiver.deposit(@amount)
       self.status = "complete"
     else
-      binding.pry
       "Transaction rejected. Please check your account balance."
       self.status = "rejected"
     end

@@ -1,22 +1,22 @@
 class BankAccount
   def intialize
-    # can initialize a Bank Account (FAILED - 1)
-    # initializes with a name (FAILED - 2)
-    # always initializes with balance of 1000 (FAILED - 3)
-    # always initializes with a status of 'open' (FAILED - 4)
+    # can initialize a Bank Account
+    # initializes with a name
+    # always initializes with balance of 1000
+    # always initializes with a status of 'open'
     # can't change its name
   end
 
   def deposit
-    # can deposit money into its account (FAILED - 5)
+    # can deposit money into its account
   end
 
   def display_balance
-    # can display its balance (FAILED - 6)
+    # can display its balance
   end
 
   def valid?
-    # is valid with an open status and a balance greater than 0 (FAILED - 7)
+    # is valid with an open status and a balance greater than 0
   end
 
   def close_account

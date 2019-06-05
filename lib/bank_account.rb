@@ -1,10 +1,11 @@
 class BankAccount
+  attr_accessor :balance, :status
+  attr_reader :name
+
   def intialize(name)
-    # can initialize a Bank Account
-    # initializes with a name
-    # always initializes with balance of 1000
-    # always initializes with a status of 'open'
-    # can't change its name
+    @name = name
+    @balance = 1000
+    @status = "open"
   end
 
   def deposit

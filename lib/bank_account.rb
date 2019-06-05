@@ -5,6 +5,7 @@ class BankAccount
     # always initializes with balance of 1000 (FAILED - 3)
     # always initializes with a status of 'open' (FAILED - 4)
     # can't change its name
+  end
 
   def deposit
     # can deposit money into its account (FAILED - 5)

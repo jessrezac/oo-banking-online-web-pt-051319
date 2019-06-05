@@ -1,5 +1,5 @@
 class BankAccount
-  def intialize
+  def intialize(name)
     # can initialize a Bank Account
     # initializes with a name
     # always initializes with balance of 1000

@@ -14,9 +14,11 @@ class Transfer
   end
 
   def execute_transaction
-    self.sender.deposit(-@amount) if valid?
-    self.receiver.deposit(@amount) if self.status == "pending"
-    self.status = "complete"
+    if valid? && status == "pending"
+      self.sender.deposit(-@amount)
+      self.receiver.deposit(@amount)
+      self.status = "complete"
+    end
 
     #   each transfer can only happen once
     #   rejects a transfer if the sender doesn't have a valid account

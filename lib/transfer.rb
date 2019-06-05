@@ -9,8 +9,7 @@ class Transfer
   end
 
   def valid?
-    #   can check that both accounts are valid
-    #   calls on the sender and receiver's #valid? methods
+    self.sender.valid? && self.receiver.valid?
   end
 
   def execute_transaction
